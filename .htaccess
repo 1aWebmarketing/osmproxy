@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Redirect requests in the format /{z}/{x}/{y} or /{z}/{x}/{y}.png to index.php
+RewriteRule ^(\d+)/(\d+)/(\d+)(\.png)?$ index.php?z=$1&x=$2&y=$3 [L,QSA]
