@@ -1,4 +1,6 @@
 <?php
+define('STYLE', 'osmde');
+
 // Configure your cache directory
 $cacheDir = __DIR__ . '/osm_cache'; // This will store tiles in a directory called 'osm_cache' in the same folder as the PHP script
 
@@ -8,7 +10,7 @@ if (!is_dir($cacheDir)) {
 }
 
 // URL pattern for OpenStreetMap tile server
-$osmUrl = 'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png';
+$osmUrl = 'https://{s}.tile.openstreetmap.de/tiles/' . STYLE . '/{z}/{x}/{y}.png';
 
 // Allowed subdomains
 $subdomains = ['a', 'b', 'c'];
